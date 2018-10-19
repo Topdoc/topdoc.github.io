@@ -5,25 +5,32 @@
   <meta charset="utf-8">
   <title>Topdoc</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
 </head>
 
 <body>
   <header class="site-header">
-    <div class="wrap">
+    <div class="content">
       <a href="/" class="logo">
-        <img src="assets/images/logo.svg" alt="Logo">
-        <span class="header">Topdoc</span>
+        <img src="/img/logo.svg" alt="Logo">
+        <h1 class="header">Topdoc</h1>
       </a>
-      <nav>
-        <a href="/" class="selected">Home</a>
-        <a href="/about/" class="">About</a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/" class="selected">Home</a></li>
+          <li><a href="/about/" class="">About</a></li>
+        </ul>
       </nav>
     </div>
   </header>
-  <h1>Topdoc</h1>
-  <section>
-    {{ content }}
-  </section>
+  <main>
+    <div class="content">
+      <h1>Topdoc</h1>
+      <section>
+        {{ content }}
+      </section>
+    </div>
+  </main>
   <footer></footer>
 </body>
 
