@@ -1,0 +1,128 @@
+//colors
+$color-heavy-metal: #25382f;
+$color-roman: #e95f52;
+$black: rgba(0, 0, 0, .1);
+//fonts
+$font-primary: Source Sans Pro;
+$font-secondary: sans-serif;
+
+:root {
+  font-size: 18px;
+}
+
+body {
+  font-family: $font-primary, $font-secondary;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.site-nav {
+  height: 32px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    font-weight: 400;
+    font-size: .9rem;
+    padding-bottom: 2px;
+    &:nth-last-child(n+2) {
+      margin-right: 40px;
+    }
+  }
+
+  .selected {
+    border-bottom: 4px solid $color-roman;
+  }
+}
+
+.site-header {
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  height: 90px;
+  position: sticky;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5;
+
+  a {
+    text-decoration: none;
+    color: $color-heavy-metal;
+  }
+
+  h1 {
+    letter-spacing: -.05em;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  right: 0;
+  border-bottom: 2px solid $black;
+}
+.site-footer {
+  position: relative;
+  z-index: 5;
+  font-size: .8rem;
+  text-align: center;
+  padding: 5px 0;
+}
+.site-footer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2px;
+  right: 0;
+  border-bottom: 2px solid $black;
+}
