@@ -9,13 +9,21 @@ url: ""
 twitter_username: TopdocStyle
 github_username:  topdoc
 permalink: pretty
+highlighter: rouge
+repository: topdoc/topdoc.github.io
 
 sass:
   sass_dir: _sass
 
 markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 plugins:
   - jekyll-feed
+  - jekyll-github-metadata
 defaults:
   -
     scope:

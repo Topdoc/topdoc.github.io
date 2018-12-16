@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     mode: "css",
     value: editorTextarea.value.trim(),
     lineNumbers: true,
-    lineWrapping: true
+    lineWrapping: true,
+    theme: 'zenburn'
   });
   const resultsCodeMirror = CodeMirror((elt) => {
     resultsTextarea.parentNode.replaceChild(elt, resultsTextarea);

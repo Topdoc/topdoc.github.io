@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "JEKYLL_ENV=dev bundle exec rake & browser-sync 'http://localhost:4000' '_site' -w & npm run js:watch && fg",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "js:build": "parcel build js/src/index.js -d js/ --no-source-maps",
-    "js:watch": "watch -f js/src/index.js -r 'npm run js:build'"
+    "js:watch": "watch -f js/src/index.js -r 'npm run js:build'",
+    "build": "npm run js:build; bundle exec rake html_proofer"
   },
   "repository": {
     "type": "git",
