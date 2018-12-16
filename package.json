@@ -1,0 +1,33 @@
+{
+  "name": "topdoc.github.io",
+  "version": "1.0.0",
+  "description": "Basic documentation for Topdoc styleguide generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "JEKYLL_ENV=dev bundle exec rake & browser-sync 'http://localhost:4000' '_site' -w & npm run js:watch && fg",
+    "js:build": "parcel build js/src/index.js -d js/ --no-source-maps",
+    "js:watch": "watch -f js/src/index.js -r 'npm run js:build'",
+    "build": "npm run js:build; bundle exec rake html_proofer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GarthDB/topdoc.github.io.git"
+  },
+  "author": "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/GarthDB/topdoc.github.io/issues"
+  },
+  "homepage": "https://github.com/GarthDB/topdoc.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "cli-watch": "^1.0.7",
+    "parcel": "^1.10.3"
+  },
+  "dependencies": {
+    "codemirror": "^5.42.0",
+    "postcss": "^7.0.6",
+    "postcss-topdoc": "^0.1.7",
+    "topdoc": "^1.1.6"
+  }
+}

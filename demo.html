@@ -1,0 +1,37 @@
+---
+title: Try it Live
+permalink: /demo/
+order: 2
+nav: true
+layout: demo
+scripts:
+  - /js/index.js
+stylesheets:
+  - /css/codemirror.css
+  - /css/demo.css
+---
+<div class="editor">
+  <textarea id="editor__textarea">
+/* editable - put in css with topdoc comments here. */
+/* topdoc
+name: Select
+description: a dropdown select
+markup: |
+  <select name="select">
+    <option value="value1">Value 1</option>
+    <option value="value2" selected>Value 2</option>
+    <option value="value3">Value 3</option>
+  </select>
+tags:
+  - desktop
+  - mobile
+  - select
+*/
+.select {
+  background: rebeccapurple;
+}
+  </textarea>
+</div>
+<div class="results">
+  <textarea id="results__textarea"></textarea>
+</div>

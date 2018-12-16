@@ -1,0 +1,14 @@
+<nav class="site-nav">
+  <ul>
+    {% assign filtered = (site.pages | where: "nav","true") %}
+    {% assign sorted = (filtered | sort: "order") %}
+    {% for node in sorted %}
+      {% if node.url == page.url %}
+        <li class="selected">{{node.title}}</li>
+      {% else %}
+        <li><a href="{{node.url}}">{{node.title}}</a></li>
+      {% endif %}
+    {% endfor %}
+    <li><a href="https://github.com/topdoc/topdoc">GitHub</a></li>
+  </ul>
+</nav>
