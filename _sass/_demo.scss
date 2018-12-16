@@ -1,0 +1,26 @@
+.page--demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header header"
+    "editor editor results results"
+    "footer footer footer footer";
+  .site-header {
+    position: sticky;
+    grid-area: header;
+  }
+  .editor {
+    grid-area: editor;
+  }
+  .results {
+    grid-area: results;
+    background: green;
+  }
+  .site-footer {
+    grid-area: footer;
+  }
+}
+.editor {
+  border-right: 2px solid rgba(0, 0, 0, .05);
+}
