@@ -3,5 +3,36 @@ title: Home
 order: 0
 nav: true
 permalink: /
+layout: home
 ---
-<p>This</p>
+<section class="home__section--hero">
+  <div class="content">
+    <div class="home__sectionDescription">
+      <h1 class="home__sectionTitle">Topdoc</h1>
+      <h4>The styleguide generator for design systems</h4>
+    </div>
+    <img class="topdoc-logo" src="/img/logo.svg" alt="Topdoc Logo">
+  </div>
+</section>
+<section class="home__section--flexible">
+  <div class="content">
+    <img class="topdoc-mascot" src="/img/topdoc-mascot.svg" alt="Topdoc Mascot">
+    <div class="home__sectionDescription">
+      <h2 class="home__sectionTitle">What is Topdoc?</h2>
+      <p>Topdoc provides a simple and flexible format for documenting a design system in the context of CSS using block comments and a YAML based syntax.</p>
+      <p>This format provides the metadata needed to generate a styleguide that can be used by engineers, designers, and anyone else interested in the design system, to preview and inspect the components.</p>
+    </div>
+  </div>
+</section>
+<section class="home__section--themable">
+  <div class="content">
+    <div class="home__sectionDescription">
+      <h2 class="home__sectionTitle">Flexible</h2>
+      <p>Unlike other documentation formats, Topdoc is not very opinionated in regards to what data is expected in the comment blocks. As a result, the open format allows teams to adjust the metadata to the exact needs of their documentation and users.</p>
+      <h2>Themable</h2>
+      <p>To allow additional flexibilty in the presentation of the design system, the data from the block comments can be parsed and passed to a custom template. There is a default template provided to make it easy to get up and running with a new project.</p>
+      <h2 class="home__sectionTitle">Open-source and free</h2>
+      <p>Snap.svg is available under an Apache 2 license which means it’s completely open-source, and completely free.</p>
+    </div>
+  </div>
+</section>

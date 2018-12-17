@@ -25,6 +25,15 @@ body {
     "header"
     "main"
     "footer";
+  .site-header {
+    grid-area: header;
+  }
+  .site-main {
+    grid-area: main;
+  }
+  .site-footer {
+    grid-area: footer;
+  }
 }
 
 .logo {
@@ -32,18 +41,18 @@ body {
   align-items: center;
 
   img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
+    margin-right: 10px;
   }
 }
 
 .content {
   width: 100vw;
-  max-width: 1200px;
+  max-width: 1020px;
   margin: 0 auto;
   position: relative;
-  //Instead of the line below you could use @include box-sizing($bs)
   box-sizing: border-box;
   padding-left: 10px;
   padding-right: 10px;

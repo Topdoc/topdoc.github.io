@@ -4,8 +4,6 @@ import JSMode from 'codemirror/mode/javascript/javascript';
 import postcss from 'postcss';
 import Topdoc from 'postcss-topdoc';
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
   const editorTextarea = document.getElementById('editor__textarea');
   const resultsTextarea = document.getElementById('results__textarea');
@@ -25,14 +23,18 @@ document.addEventListener('DOMContentLoaded', function() {
     readOnly: true,
     lineWrapping: true
   });
+
+  function formatResults (result) {
+    delete result.topdoc.minified;
+    const displayResults = JSON.stringify(result.topdoc, null, "  ");
+    resultsCodeMirror.setValue(displayResults);
+  }
+
   editorCodeMirror.setSize("100%", "100%");
   resultsCodeMirror.setSize("100%", "100%");
   editorCodeMirror.on('change', (cm)=>{
     const output = postcss(Topdoc).process(editorCodeMirror.getValue())
-    .then(result => {
-      const displayResults = JSON.stringify(result.topdoc, null, "  ");
-      resultsCodeMirror.setValue(displayResults);
-    })
+    .then(formatResults)
     .catch(error => {
       delete error.source;
       delete error.input;
@@ -41,8 +43,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   const output = postcss(Topdoc).process(editorCodeMirror.getValue())
-  .then((result) => {
-    const displayResults = JSON.stringify(result.topdoc, null, "  ");
-    resultsCodeMirror.setValue(displayResults);
-  });
+  .then(formatResults);
 }, false);
