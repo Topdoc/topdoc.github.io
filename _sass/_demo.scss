@@ -7,7 +7,6 @@
     "editor editor results results"
     "footer footer footer footer";
   .site-header {
-    position: sticky;
     grid-area: header;
   }
   .editor {
@@ -15,7 +14,6 @@
   }
   .results {
     grid-area: results;
-    background: green;
   }
   .site-footer {
     grid-area: footer;
