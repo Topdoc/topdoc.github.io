@@ -1,7 +1,8 @@
+{% assign random = site.time | date: "%s%N" %}
 <header class="site-header">
   <div class="content">
     <a href="/" class="logo">
-      <img src="/img/logo.svg" alt="Logo">
+      <img src="/img/logo.svg?published={{ random }}" alt="Logo">
       <h1 class="header">Topdoc</h1>
     </a>
     {% include nav.html %}
