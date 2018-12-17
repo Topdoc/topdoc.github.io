@@ -49,7 +49,7 @@ $hero-background-color: #e6898b;
 .home__section--hero {
   background: url('/img/hero-background.svg') $hero-background-color no-repeat right;
   color: #fff;
-  h1 {
+  .home__sectionTitle {
     font-size: 72px;
     font-weight: 500;
     letter-spacing: -3.6px;
