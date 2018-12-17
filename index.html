@@ -5,19 +5,18 @@ nav: true
 permalink: /
 layout: home
 ---
-{% assign random = site.time | date: "%s%N" %}
 <section class="home__section--hero">
   <div class="content">
     <div class="home__sectionDescription">
       <h1 class="home__sectionTitle">Topdoc</h1>
       <h4>The styleguide generator for design systems</h4>
     </div>
-    <img class="topdoc-logo" src="/img/logo.svg?published={{ random }}" alt="Topdoc Logo">
+    <img class="topdoc-logo" src="/img/logo.svg" alt="Topdoc Logo">
   </div>
 </section>
 <section class="home__section--flexible">
   <div class="content">
-    <img class="topdoc-mascot" src="/img/topdoc-mascot.svg?published={{ random }}" alt="Topdoc Mascot">
+    <img class="topdoc-mascot" src="/img/topdoc-mascot.svg" alt="Topdoc Mascot">
     <div class="home__sectionDescription">
       <h2 class="home__sectionTitle">What is Topdoc?</h2>
       <p>Topdoc provides a simple and flexible format for documenting a design system in the context of CSS using block comments and a YAML based syntax.</p>
