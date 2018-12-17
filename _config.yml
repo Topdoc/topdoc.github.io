@@ -37,3 +37,7 @@ exclude:
   - vendor/ruby/
   - js/src/
   - .cache/
+  - Rakefile
+  - package.json
+  - package-lock.json
+  - CNAME
